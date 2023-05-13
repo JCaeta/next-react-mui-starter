@@ -1,0 +1,27 @@
+
+@mixin responsive-height($height){
+    height: $height;
+
+    $breakpoints: (
+        600px: 1.2,
+        800px: 1.4,
+        1000px: 1.6,
+        1200px: 1.8,
+        1400px: 2,
+        1600px: 2.5,
+        1800px: 2.8,
+        2000px: 3,
+        2200px: 3.2,
+        2400px: 3.5,
+    );
+  
+    @each $bp, $multiplier in $breakpoints {
+        @media screen and (min-width: $bp) and (max-width: #{($bp + 199px)}) {
+            height: $height * $multiplier;
+        }
+
+        @media screen and (min-width: 2400px){
+            height: $height * $multiplier;
+        }
+    }
+}

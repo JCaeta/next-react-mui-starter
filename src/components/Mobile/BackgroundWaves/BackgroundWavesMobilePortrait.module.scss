@@ -1,0 +1,72 @@
+@import "./ResponsivePortrait.scss";
+
+.container{
+    position: relative;
+    height: 85vh;
+    background: rgb(228, 105, 18);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+
+.wave{
+    width: 400%;
+    position: absolute;
+
+    @include responsive-height(30%);
+}
+
+.wave1{
+    opacity: 0.5;
+    animation: animate 10s linear infinite;
+}
+
+.wave2{
+    opacity: 0.4;
+    animation: animate 18s linear infinite;
+}
+
+.wave3{
+    opacity: 0.3;
+    animation: animate 21s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: 
+            translateX(0) 
+            translateZ(0) 
+            scaleY(1);
+    }
+    
+    25%{
+        transform: 
+            translateX(-30%) 
+            translateZ(0) 
+            translateY(calc(100%*0.25)) 
+            scaleY(0.75);
+    }
+
+    50%{
+        transform: 
+            translateX(-50%) 
+            translateZ(0) 
+            translateY(calc(100%*0.5)) 
+            scaleY(0.5);
+    }
+    
+    75%{
+        transform: 
+            translateX(-20%) 
+            translateZ(0) 
+            translateY(calc(100%*0.25))
+            scaleY(0.75);
+    }
+
+    100%{
+        transform: 
+            translateX(0%) 
+            translateZ(0) 
+            scaleY(1);
+    }
+}

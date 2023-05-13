@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/api/Component": "pages/api/Component.js",
+  "/api/endpoints": "pages/api/endpoints.js",
+  "/blog/second": "pages/blog/second.html",
+  "/": "pages/index.html",
+  "/blog/first": "pages/blog/first.html",
+  "/product/[productId]": "pages/product/[productId].html",
+  "/product/[productId]/review/[reviewId]": "pages/product/[productId]/review/[reviewId].html",
+  "/product": "pages/product.html",
+  "/product/sweater": "pages/product/sweater.html",
+  "/blog": "pages/blog.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
+}
